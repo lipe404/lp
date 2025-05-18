@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .produto-card {
   background-color: white;
   padding: 1.5rem;
@@ -11,7 +12,31 @@ html {
   font-weight: 600;
   color: #5b21b6;
 }
+
 .produto-card:hover {
   background-color: #f3e8ff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+/* Exemplo de fadeInDown customizado */
+@keyframes customFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.custom-fade-in-down {
+  animation-name: customFadeInDown;
+  animation-duration: 1s;
+  /* ou a duração padrão do animate.css */
+  animation-fill-mode: both;
+  /* para manter o estado final */
+}
+
+/* Similar para fadeInUp */
